@@ -1,0 +1,22 @@
+[workspace]
+resolver = "3"
+members = ["untdid", "untdid-macros"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+authors = ["Andrew Kozin"]
+repository = "https://github.com/nepalez/untdid"
+keywords = ["untdid", "edifact", "uncefact", "unece", "en16931"]
+categories = ["encoding", "parser-implementations"]
+
+[workspace.dependencies]
+heck = "0.5.0"
+proc-macro2 = "1.0.107"
+quote = "1.0.47"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+syn = { version = "3.0.4", features = ["full", "parsing", "extra-traits"] }
+untdid-macros = { path = "untdid-macros", version = "0.1.0" }
